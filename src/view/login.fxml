@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controller.LoginController"
+           style="-fx-background-color: #0d0d0d;">
+
+    
+
+    <VBox maxWidth="420" alignment="CENTER" spacing="0"
+          style="-fx-background-color: #161616;
+                 -fx-background-radius: 16;
+                 -fx-border-color: #2a2a2a;
+                 -fx-border-radius: 16;
+                 -fx-border-width: 1;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 60, 0, 0, 20);">
+
+        <HBox prefHeight="4" minWidth="420"
+              style="-fx-background-color: #e92000; -fx-background-radius: 16 16 0 0;"/>
+
+        <VBox spacing="0" style="-fx-padding: 40 44 44 44;">
+
+            <VBox alignment="CENTER" spacing="8" style="-fx-padding: 0 0 36 0;">
+                <Label text="CINEMAX"
+                       style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white; -fx-letter-spacing: 8;"/>
+                <Label text="BOOK  ·  WATCH  ·  ENJOY"
+                       style="-fx-font-size: 9px; -fx-text-fill: #e92000; -fx-letter-spacing: 4;"/>
+            </VBox>
+
+            <VBox spacing="6" style="-fx-padding: 0 0 14 0;">
+                <Label text="USERNAME"
+                       style="-fx-font-size: 9px; -fx-font-weight: bold; -fx-text-fill: #555555; -fx-letter-spacing: 2;"/>
+                <TextField fx:id="usernameField" promptText="Enter your username"
+                           style="-fx-background-color: #0d0d0d; -fx-text-fill: white; -fx-prompt-text-fill: #333333;
+                                  -fx-border-color: #2a2a2a; -fx-border-radius: 8; -fx-background-radius: 8;
+                                  -fx-padding: 13 16; -fx-font-size: 13px;"/>
+            </VBox>
+
+            <VBox spacing="6" style="-fx-padding: 0 0 20 0;">
+                <Label text="PASSWORD"
+                       style="-fx-font-size: 9px; -fx-font-weight: bold; -fx-text-fill: #555555; -fx-letter-spacing: 2;"/>
+                <PasswordField fx:id="passwordField" promptText="Enter your password"
+                               style="-fx-background-color: #0d0d0d; -fx-text-fill: white; -fx-prompt-text-fill: #333333;
+                                      -fx-border-color: #2a2a2a; -fx-border-radius: 8; -fx-background-radius: 8;
+                                      -fx-padding: 13 16; -fx-font-size: 13px;"/>
+            </VBox>
+
+            <Label fx:id="errorLabel" text="" visible="false" maxWidth="Infinity" wrapText="true" alignment="CENTER"
+                   style="-fx-font-size: 11px; -fx-text-fill: #e92000; -fx-background-color: #1a0000;
+                          -fx-background-radius: 6; -fx-padding: 8 12; -fx-border-color: #3a0000;
+                          -fx-border-radius: 6; -fx-border-width: 1;"/>
+
+            <Region prefHeight="12"/>
+
+            <Button text="SIGN IN" onAction="#handleLogin"
+                    maxWidth="Infinity" prefHeight="48"
+                    style="-fx-background-color: #e92000; -fx-text-fill: white; -fx-font-weight: bold;
+                           -fx-font-size: 13px; -fx-letter-spacing: 2; -fx-background-radius: 8; -fx-cursor: hand;
+                           -fx-effect: dropshadow(gaussian, rgba(233,32,0,0.4), 18, 0, 0, 4);"/>
+
+            <Label text="Default: admin / 1234"
+                   style="-fx-font-size: 10px; -fx-text-fill: #333333; -fx-padding: 14 0 0 0;"
+                   alignment="CENTER" maxWidth="Infinity"/>
+        </VBox>
+    </VBox>
+</StackPane>

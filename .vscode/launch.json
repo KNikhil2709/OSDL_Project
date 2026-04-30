@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run JavaFX",
+      "request": "launch",
+      "mainClass": "app.MainApp",
+      "vmArgs": "--module-path C:/Nikhil/Manipal/2ndYear/OSDL/javafx-sdk-23.0.2/lib --add-modules javafx.controls,javafx.fxml"
+    }
+  ]
+}

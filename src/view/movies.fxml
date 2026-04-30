@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.MovieController"
+      style="-fx-background-color: #0d0d0d;">
+
+    <!-- Navbar -->
+    <HBox alignment="CENTER_LEFT" prefHeight="60"
+          style="-fx-background-color: #111111; -fx-border-color: #222222;
+                 -fx-border-width: 0 0 1 0; -fx-padding: 0 32;">
+        <HBox alignment="CENTER_LEFT" spacing="12" HBox.hgrow="ALWAYS">
+            <Label text="CINEMAX"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: white; -fx-letter-spacing: 6;"/>
+            <Label text="●" style="-fx-text-fill: #e92000; -fx-font-size: 8px;"/>
+            <Label text="Now Showing"
+                   style="-fx-font-size: 12px; -fx-text-fill: #555555;"/>
+        </HBox>
+        <Button text="← Home" onAction="#goBack" prefHeight="36"
+                style="-fx-background-color: transparent; -fx-text-fill: #444444; -fx-font-size: 11px;
+                       -fx-padding: 0 16; -fx-border-color: #2a2a2a; -fx-border-radius: 6;
+                       -fx-background-radius: 6; -fx-cursor: hand;"/>
+    </HBox>
+
+    <!-- Page title -->
+    <VBox style="-fx-padding: 28 32 16 32;" spacing="4">
+        <Label text="Now Showing"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+        <Label text="Click a movie poster to view showtimes and book your seats"
+               style="-fx-font-size: 12px; -fx-text-fill: #444444;"/>
+    </VBox>
+
+    <!-- Movie poster grid — populated dynamically by controller -->
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS"
+                style="-fx-background: transparent; -fx-background-color: transparent;
+                       -fx-border-color: transparent; -fx-padding: 0;">
+        <FlowPane fx:id="movieGrid" hgap="20" vgap="20" alignment="TOP_LEFT"
+                  style="-fx-padding: 8 32 32 32; -fx-background-color: transparent;"/>
+    </ScrollPane>
+
+</VBox>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.DashboardController"
+      style="-fx-background-color: #0d0d0d;">
+
+    <!-- Navbar -->
+    <HBox alignment="CENTER_LEFT" prefHeight="60"
+          style="-fx-background-color: #111111; -fx-border-color: #222222;
+                 -fx-border-width: 0 0 1 0; -fx-padding: 0 32;">
+        <HBox alignment="CENTER_LEFT" spacing="12" HBox.hgrow="ALWAYS">
+            <Label text="CINEMAX"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: white; -fx-letter-spacing: 6;"/>
+            <Label text="●" style="-fx-text-fill: #e92000; -fx-font-size: 8px;"/>
+            <Label fx:id="welcomeLabel"
+                   style="-fx-font-size: 12px; -fx-text-fill: #555555;"/>
+        </HBox>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="Browse Movies" onAction="#openMovies" prefHeight="36"
+                    style="-fx-background-color: #e92000; -fx-text-fill: white; -fx-font-weight: bold;
+                           -fx-font-size: 11px; -fx-letter-spacing: 1; -fx-padding: 0 22;
+                           -fx-background-radius: 6; -fx-cursor: hand;"/>
+            <Button text="Sign Out" onAction="#logout" prefHeight="36"
+                    style="-fx-background-color: transparent; -fx-text-fill: #444444; -fx-font-size: 11px;
+                           -fx-padding: 0 16; -fx-border-color: #2a2a2a; -fx-border-radius: 6;
+                           -fx-background-radius: 6; -fx-cursor: hand;"/>
+        </HBox>
+    </HBox>
+
+    <!-- Hero -->
+    <StackPane VBox.vgrow="ALWAYS">
+        
+
+        <VBox alignment="CENTER" spacing="24" style="-fx-padding: 0 60;">
+
+            <VBox alignment="CENTER" spacing="12">
+                <Label text="Your Cinema, Your Seats."
+                       style="-fx-font-size: 38px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                <Label text="Browse movies · Pick a showtime · Choose your seats"
+                       style="-fx-font-size: 14px; -fx-text-fill: #444444;"/>
+            </VBox>
+
+            <Button text="Browse Movies Now" onAction="#openMovies"
+                    prefHeight="52" prefWidth="220"
+                    style="-fx-background-color: #e92000; -fx-text-fill: white; -fx-font-weight: bold;
+                           -fx-font-size: 14px; -fx-letter-spacing: 1; -fx-background-radius: 8; -fx-cursor: hand;
+                           -fx-effect: dropshadow(gaussian, rgba(233,32,0,0.333), 24, 0, 0, 8);"/>
+
+            <!-- Stats -->
+            <HBox spacing="14" alignment="CENTER" style="-fx-padding: 16 0 0 0;">
+                <VBox alignment="CENTER" spacing="5" prefWidth="120" prefHeight="86"
+                      style="-fx-background-color: #111111; -fx-background-radius: 10;
+                             -fx-border-color: #1e1e1e; -fx-border-radius: 10; -fx-border-width: 1;">
+                    <Label text="5" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #e92000;"/>
+                    <Label text="MOVIES" style="-fx-font-size: 9px; -fx-text-fill: #333333; -fx-letter-spacing: 2;"/>
+                </VBox>
+                <VBox alignment="CENTER" spacing="5" prefWidth="120" prefHeight="86"
+                      style="-fx-background-color: #111111; -fx-background-radius: 10;
+                             -fx-border-color: #1e1e1e; -fx-border-radius: 10; -fx-border-width: 1;">
+                    <Label text="56" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #ff8c00;"/>
+                    <Label text="SEATS" style="-fx-font-size: 9px; -fx-text-fill: #333333; -fx-letter-spacing: 2;"/>
+                </VBox>
+                <VBox alignment="CENTER" spacing="5" prefWidth="120" prefHeight="86"
+                      style="-fx-background-color: #111111; -fx-background-radius: 10;
+                             -fx-border-color: #1e1e1e; -fx-border-radius: 10; -fx-border-width: 1;">
+                    <Label text="4+" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #00b4d8;"/>
+                    <Label text="SHOWS" style="-fx-font-size: 9px; -fx-text-fill: #333333; -fx-letter-spacing: 2;"/>
+                </VBox>
+                <VBox alignment="CENTER" spacing="5" prefWidth="120" prefHeight="86"
+                      style="-fx-background-color: #111111; -fx-background-radius: 10;
+                             -fx-border-color: #1e1e1e; -fx-border-radius: 10; -fx-border-width: 1;">
+                    <Label text="HD" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #7c3aed;"/>
+                    <Label text="QUALITY" style="-fx-font-size: 9px; -fx-text-fill: #333333; -fx-letter-spacing: 2;"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </StackPane>
+
+    <!-- Footer -->
+    <HBox alignment="CENTER" prefHeight="36"
+          style="-fx-background-color: #111111; -fx-border-color: #1a1a1a; -fx-border-width: 1 0 0 0;">
+        <Label text="© 2025 CINEMAX  ·  Premium Movie Booking"
+               style="-fx-font-size: 10px; -fx-text-fill: #2a2a2a;"/>
+    </HBox>
+</VBox>

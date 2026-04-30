@@ -1,0 +1,5 @@
+1,Avengers,Action,10AM|2PM|6PM|9PM,150
+2,Batman,Action,11AM|3PM|7PM,130
+3,Inception,Thriller,12PM|4PM|8PM,120
+4,Interstellar,Sci-Fi,1PM|5PM|9PM,140
+5,The Dark Knight,Action,10AM|6PM|10PM,135
